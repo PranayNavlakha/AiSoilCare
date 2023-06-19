@@ -73,11 +73,7 @@ async function init() {
     }
   }
 
-  if (!webcam) {
-    // If environment camera is not available or not found, fallback to default camera
-    webcam = new tmImage.Webcam(300, 300, flip); // Width, height, flip
-    await webcam.setup(); // Request access to the webcam
-  }
+
 
   await webcam.play();
   window.requestAnimationFrame(loop);
